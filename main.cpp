@@ -1,9 +1,17 @@
 #include <iostream>
-
-void printTest(){
-    std::cout<<"Test alreade."<<std::endl;
+#include "src/Map.cpp"
+void print(char** c, short height, short width){
+    for(int i=0;i<height;i++){
+        for(int t=0;t<width;t++){
+            std::cout<<c[i][t];
+        }
+        std::cout<<std::endl;
+    }
 }
 int main(){
-    printTest();
+    Map m;
+    char **c=m.getPtrMap();
+    size s=m.getSize();
+    print(c,s.height,s.width);
     return 0;
 }

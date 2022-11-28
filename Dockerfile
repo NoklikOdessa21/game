@@ -4,6 +4,6 @@ COPY . /usr/src/app/
 
 WORKDIR /usr/src/app/
 
-RUN g++ main.cpp -o Test
+RUN g++ main.cpp src/Map.cpp -o Test
 
 CMD ["./Test"]
